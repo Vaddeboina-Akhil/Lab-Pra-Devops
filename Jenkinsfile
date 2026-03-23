@@ -4,7 +4,8 @@ pipeline {
   environment {
     DOCKERHUB_CREDENTIALS_ID = 'dockerhub-creds'
     KUBECONFIG_CREDENTIALS_ID = 'kubeconfig-creds'
-    DOCKERHUB_REPO = 'yourdockerhubusername/portfolio'
+    DOCKERHUB_REPO = '23p61a05m5/portfolio'
+    DOCKERHUB_REPO_BACKEND = '23p61a05m5/portfolio-backend'
   }
 
   triggers {
@@ -23,6 +24,14 @@ pipeline {
         dir('frontend') {
           sh 'npm install'
           sh 'npm run build'
+        }
+      }
+    }
+
+    stage('Build Backend Docker Image') {
+      steps {
+        dir('backend') {
+          sh "docker build -t ${DOCKERHUB_REPO_BACKEND}:${BUILD_NUMBER} ."
         }
       }
     }
@@ -62,13 +71,26 @@ pipeline {
       }
     }
 
+    stage('Push Backend Docker Image') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS_ID, usernameVariable: 'DOCKERHUB_USER', passwordVariable: 'DOCKERHUB_PASS')]) {
+          sh """
+            echo "${DOCKERHUB_PASS}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
+            docker push ${DOCKERHUB_REPO_BACKEND}:${BUILD_NUMBER}
+          """
+        }
+      }
+    }
+
     stage('Deploy to Kubernetes') {
       steps {
         withCredentials([file(credentialsId: KUBECONFIG_CREDENTIALS_ID, variable: 'KUBECONFIG_FILE')]) {
           sh """
             export KUBECONFIG=${KUBECONFIG_FILE}
             kubectl set image deployment/portfolio portfolio=${DOCKERHUB_REPO}:${BUILD_NUMBER} --record
+            kubectl set image deployment/portfolio-backend portfolio-backend=${DOCKERHUB_REPO_BACKEND}:${BUILD_NUMBER} --record
             kubectl rollout status deployment/portfolio
+            kubectl rollout status deployment/portfolio-backend
           """
         }
       }

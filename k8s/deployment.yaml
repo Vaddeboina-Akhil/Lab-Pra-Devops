@@ -16,8 +16,31 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: yourdockerhubusername/portfolio:latest
+          image: 23p61a05m5/portfolio:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-backend
+  labels:
+    app: portfolio-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: portfolio-backend
+  template:
+    metadata:
+      labels:
+        app: portfolio-backend
+    spec:
+      containers:
+        - name: portfolio-backend
+          image: 23p61a05m5/portfolio-backend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
 

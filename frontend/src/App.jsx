@@ -5,6 +5,8 @@ function App() {
   const [buildInfo, setBuildInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [projects, setProjects] = useState([]);
+  const [projectsLoading, setProjectsLoading] = useState(true);
 
   useEffect(() => {
     const fetchBuildInfo = async () => {
@@ -65,6 +67,48 @@ function App() {
     };
 
     fetchBuildInfo();
+  }, []);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        // In development: http://localhost:3000/api/projects
+        // In production: http://<backend-service-url>/api/projects
+        const res = await fetch('http://localhost:3000/api/projects'); // Change to actual backend URL
+        if (!res.ok) {
+          throw new Error('Failed to load projects');
+        }
+        const data = await res.json();
+        setProjects(data);
+      } catch (err) {
+        console.error('Failed to fetch projects:', err);
+        // Fallback to static data
+        setProjects([
+          {
+            id: 1,
+            title: 'CI/CD Portfolio',
+            description: 'This project – a fully automated portfolio deployed on Kubernetes using Jenkins and Docker.',
+            technologies: ['React', 'Jenkins', 'Docker', 'Kubernetes']
+          },
+          {
+            id: 2,
+            title: 'Sample Microservice',
+            description: 'Containerized Node.js API with Kubernetes deployment and monitoring.',
+            technologies: ['Node.js', 'Express', 'Docker', 'Kubernetes', 'Prometheus']
+          },
+          {
+            id: 3,
+            title: 'Monitoring Dashboard',
+            description: 'Basic monitoring setup using Prometheus & Grafana for container workloads.',
+            technologies: ['Prometheus', 'Grafana', 'Docker', 'Kubernetes']
+          }
+        ]);
+      } finally {
+        setProjectsLoading(false);
+      }
+    };
+
+    fetchProjects();
   }, []);
 
   const formattedDeployTime =
@@ -139,29 +183,21 @@ function App() {
 
         <section id="projects" className="section">
           <h3>Projects</h3>
-          <div className="grid">
-            <div className="card">
-              <h4>CI/CD Portfolio</h4>
-              <p>
-                This project – a fully automated portfolio deployed on
-                Kubernetes using Jenkins and Docker.
-              </p>
+          {projectsLoading ? (
+            <p>Loading projects...</p>
+          ) : (
+            <div className="grid">
+              {projects.map(project => (
+                <div key={project.id} className="card">
+                  <h4>{project.title}</h4>
+                  <p>{project.description}</p>
+                  {project.technologies && (
+                    <p><strong>Technologies:</strong> {project.technologies.join(', ')}</p>
+                  )}
+                </div>
+              ))}
             </div>
-            <div className="card">
-              <h4>Sample Microservice</h4>
-              <p>
-                Containerized Node.js API with Kubernetes deployment and
-                monitoring.
-              </p>
-            </div>
-            <div className="card">
-              <h4>Monitoring Dashboard</h4>
-              <p>
-                Basic monitoring setup using Prometheus &amp; Grafana for
-                container workloads.
-              </p>
-            </div>
-          </div>
+          )}
         </section>
 
         <section id="cicd" className="section ci-panel">
