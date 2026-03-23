@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 environment {
     DOCKERHUB_CREDENTIALS_ID = 'dockerhub-creds'
     KUBECONFIG_CREDENTIALS_ID = 'kubeconfig-creds'
@@ -86,8 +85,5 @@ stages {
             }
         }
     }
-
-}
-```
 
 }
