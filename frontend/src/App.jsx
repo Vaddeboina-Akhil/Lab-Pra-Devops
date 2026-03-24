@@ -253,7 +253,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <span>© {new Date().getFullYear()} VADDEBOINA AKHIL</span>
+        <span>© {new Date().getFullYear()} VADDEBOINA AKHILLLLL</span>
         <span>Built with React · Deployed on Kubernetes</span>
       </footer>
     </div>
