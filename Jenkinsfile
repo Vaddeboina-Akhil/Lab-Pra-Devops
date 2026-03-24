@@ -66,23 +66,16 @@ pipeline {
 }
 
 
-        stage('Deploy to Kubernetes') {
-            steps {
-                withCredentials([
-                    file(
-                        credentialsId: env.KUBECONFIG_CREDENTIALS_ID,
-                        variable: 'KUBECONFIG_FILE'
-                    )
-                ]) {
-                    bat """
-                    set KUBECONFIG=%KUBECONFIG_FILE%
-                    kubectl set image deployment/portfolio portfolio=%DOCKERHUB_REPO%:%BUILD_NUMBER%
-                    kubectl set image deployment/portfolio-backend portfolio-backend=%DOCKERHUB_REPO_BACKEND%:%BUILD_NUMBER%
-                    kubectl rollout status deployment/portfolio
-                    kubectl rollout status deployment/portfolio-backend
-                    """
-                }
-            }
-        }
+       stage('Deploy to Kubernetes') {
+    steps {
+        bat """
+        set KUBECONFIG=C:\\Users\\akhil\\.kube\\config
+        kubectl set image deployment/portfolio portfolio=%DOCKERHUB_REPO%:%BUILD_NUMBER%
+        kubectl set image deployment/portfolio-backend portfolio-backend=%DOCKERHUB_REPO_BACKEND%:%BUILD_NUMBER%
+        kubectl rollout status deployment/portfolio
+        kubectl rollout status deployment/portfolio-backend
+        """
+    }
+}
     }
 }
