@@ -133,7 +133,7 @@ function App() {
         <section id="hero" className="hero">
           <div className="hero-content">
             <p className="tagline">Hello, I'm</p>
-            <h1>Vaddeboina Akhil</h1>
+            <h1>Vaddeboina Akhillll</h1>
             <h2>DevOps Engineer & Full Stack Creator</h2>
             <p className="hero-subtitle">
               Building automated pipelines for modern cloud-native apps with
@@ -253,7 +253,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <span>© {new Date().getFullYear()} VADDEBOINA AKHILLLLL</span>
+        <span>© {new Date().getFullYear()} VADDEBOINA AKHIL</span>
         <span>Built with React · Deployed on Kubernetes</span>
       </footer>
     </div>
