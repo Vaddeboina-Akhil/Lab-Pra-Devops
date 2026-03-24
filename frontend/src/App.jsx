@@ -133,18 +133,18 @@ function App() {
         <section id="hero" className="hero">
           <div className="hero-content">
             <p className="tagline">Hello, I'm</p>
-            <h1>Your Name</h1>
-            <h2>DevOps Enthusiast &amp; Cloud Learner</h2>
+            <h1>Vaddeboina Akhil</h1>
+            <h2>DevOps Engineer & Full Stack Creator</h2>
             <p className="hero-subtitle">
-              I love automating builds, deployments, and monitoring using
+              Building automated pipelines for modern cloud-native apps with
               Jenkins, Docker, and Kubernetes.
             </p>
             <div className="hero-actions">
               <a href="#projects" className="btn primary">
-                View Projects
+                Explore My Work
               </a>
               <a href="#contact" className="btn secondary">
-                Contact Me
+                Get in Touch
               </a>
             </div>
           </div>
@@ -253,7 +253,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <span>© {new Date().getFullYear()} Your Name</span>
+        <span>© {new Date().getFullYear()} VADDEBOINA AKHIL</span>
         <span>Built with React · Deployed on Kubernetes</span>
       </footer>
     </div>

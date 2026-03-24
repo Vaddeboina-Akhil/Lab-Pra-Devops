@@ -1,0 +1,1197 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 23 /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R 44 0 R 46 0 R 48 0 R 50 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+5 0 obj
+<< /Length 3815 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (backend/server.js) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (const express = require\('express'\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (const cors = require\('cors'\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (const app = express\(\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (const PORT = process.env.PORT || 3000;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (// Middleware) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (app.use\(cors\(\)\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (app.use\(express.json\(\)\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (// Sample data) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (const projects = [) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (    id: 1,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (    title: 'CI/CD Portfolio',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (    description: 'A fully automated portfolio deployed on Kubernetes using Jenkins and) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (    Docker.',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (    technologies: ['React', 'Jenkins', 'Docker', 'Kubernetes']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (  },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (    id: 2,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (    title: 'Sample Microservice',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (    description: 'Containerized Node.js API with Kubernetes deployment and monitoring.',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (    technologies: ['Node.js', 'Express', 'Docker', 'Kubernetes', 'Prometheus']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (  },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (    id: 3,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (    title: 'Monitoring Dashboard',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (    description: 'Basic monitoring setup using Prometheus & Grafana for container workloads.',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (    technologies: ['Prometheus', 'Grafana', 'Docker', 'Kubernetes']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (];) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (const skills = [) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (    category: 'DevOps & Cloud',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (    items: ['Jenkins', 'Docker', 'Kubernetes', 'Helm', 'GitHub Actions']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (  },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (    category: 'Backend',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (    items: ['Node.js', 'Express', 'REST APIs']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (  },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (    category: 'Frontend',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (    items: ['React', 'HTML', 'CSS', 'JavaScript']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (  },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (  {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (    category: 'Tools',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (    items: ['Linux', 'Git', 'Bash', 'Docker Hub', 'Minikube']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (];) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (// Routes) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (app.get\('/api/health', \(req, res\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (  res.json\({ status: 'OK', message: 'Backend API is running' }\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (}\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (app.get\('/api/projects', \(req, res\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (  res.json\(projects\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (}\);) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1180 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (backend/server.js \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (app.get\('/api/skills', \(req, res\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (  res.json\(skills\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (}\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (app.get\('/api/projects/:id', \(req, res\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (  const project = projects.find\(p => p.id === parseInt\(req.params.id\)\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  if \(project\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (    res.json\(project\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (  } else {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (    res.status\(404\).json\({ error: 'Project not found' }\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (}\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (// Start server) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (app.listen\(PORT, \(\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (  console.log\(`Backend server running on port ${PORT}`\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (}\);) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 972 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (backend/package.json) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm ({) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm ("name": "portfolio-frontend",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm ("version": "1.0.0",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm ("private": true,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm ("scripts": {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm ("dev": "vite",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm ("build": "vite build",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm ("preview": "vite preview") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (},) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm ("dependencies": {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm ("react": "^18.3.0",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm ("react-dom": "^18.3.0",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm ("vite": "^6.4.1",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm ("@vitejs/plugin-react": "^4.7.0") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm () Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1101 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (backend/Dockerfile) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (# Use Node.js runtime) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (FROM node:20-alpine) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (# Set working directory) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (WORKDIR /app) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (# Copy package files) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (COPY package*.json ./) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (# Install dependencies) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (RUN npm install --only=production) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (# Copy source code) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (COPY . .) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (# Expose port) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (EXPOSE 3000) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (# Start the application) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (CMD ["npm", "start"]) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 4361 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.jsx) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (import React, { useEffect, useState } from "react";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (import "./App.css";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (function App\(\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (  const [buildInfo, setBuildInfo] = useState\(null\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (  const [loading, setLoading] = useState\(true\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (  const [error, setError] = useState\(null\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  const [projects, setProjects] = useState\([]\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  const [projectsLoading, setProjectsLoading] = useState\(true\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  useEffect\(\(\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (    const fetchBuildInfo = async \(\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (      try {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (        const res = await fetch\("/build-info.json", { cache: "no-store" }\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (        if \(!res.ok\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (          throw new Error\("Failed to load build info"\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (        const data = await res.json\(\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (        setBuildInfo\(data\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (        // #region agent log) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (        fetch\() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (          "http://127.0.0.1:7394/ingest/722304ba-72db-4375-9a3c-0f8c249f8c2c",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (          {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (            method: "POST",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (            headers: {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (              "Content-Type": "application/json",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (              "X-Debug-Session-Id": "f65546",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (            },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (            body: JSON.stringify\({) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (              sessionId: "f65546",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (              runId: "initial",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (              hypothesisId: "H1",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (              location: "App.jsx:16",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (              message: "build-info fetch success",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (              data: { buildInfo: data },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (              timestamp: Date.now\(\),) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (            }\),) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (          }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (        \).catch\(\(\) => {}\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (        // #endregion) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (      } catch \(err\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (        // #region agent log) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (        fetch\() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (          "http://127.0.0.1:7394/ingest/722304ba-72db-4375-9a3c-0f8c249f8c2c",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (          {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (            method: "POST",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (            headers: {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (              "Content-Type": "application/json",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (              "X-Debug-Session-Id": "f65546",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (            },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (            body: JSON.stringify\({) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (              sessionId: "f65546",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (              runId: "initial",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (              hypothesisId: "H2",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (              location: "App.jsx:18",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (              message: "build-info fetch failed",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (              data: { error: String\(err\) },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (              timestamp: Date.now\(\),) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (            }\),) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (          }) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 4282 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.jsx \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (        \).catch\(\(\) => {}\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (        // #endregion) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (        setError\(err instanceof Error ? err.message : String\(err\)\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (      } finally {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (        setLoading\(false\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (      }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (    };) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (    fetchBuildInfo\(\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (  }, []\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (  useEffect\(\(\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (    const fetchProjects = async \(\) => {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (      try {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (        // In development: http://localhost:3000/api/projects) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (        // In production: http://<backend-service-url>/api/projects) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (        const res = await fetch\('http://localhost:3000/api/projects'\); // Change to actual) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (        backend URL) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (        if \(!res.ok\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (          throw new Error\('Failed to load projects'\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (        const data = await res.json\(\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (        setProjects\(data\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (      } catch \(err\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (        console.error\('Failed to fetch projects:', err\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (        // Fallback to static data) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (        setProjects\([) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (          {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (            id: 1,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (            title: 'CI/CD Portfolio',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (            description: 'This project ? a fully automated portfolio deployed on Kubernetes) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (            using Jenkins and Docker.',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (            technologies: ['React', 'Jenkins', 'Docker', 'Kubernetes']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (          },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (          {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (            id: 2,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (            title: 'Sample Microservice',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (            description: 'Containerized Node.js API with Kubernetes deployment and) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (            monitoring.',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (            technologies: ['Node.js', 'Express', 'Docker', 'Kubernetes', 'Prometheus']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (          },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (          {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (            id: 3,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (            title: 'Monitoring Dashboard',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (            description: 'Basic monitoring setup using Prometheus & Grafana for container) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (            workloads.',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (            technologies: ['Prometheus', 'Grafana', 'Docker', 'Kubernetes']) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (          }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (        ]\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (      } finally {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (        setProjectsLoading\(false\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (      }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (    };) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (    fetchProjects\(\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (  }, []\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (  const formattedDeployTime =) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (    buildInfo && buildInfo.deployTime) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (      ? new Date\(buildInfo.deployTime\).toLocaleString\(\)) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 4362 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.jsx \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (      : "N/A";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (  return \() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (    <div className="app">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (      <header className="navbar">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (        <div className="logo">DevOps Portfolio</div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (        <nav>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (          <a href="#hero">Home</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (          <a href="#about">About</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (          <a href="#skills">Skills</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (          <a href="#projects">Projects</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (          <a href="#contact">Contact</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (        </nav>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (      </header>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (      <main>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (        <section id="hero" className="hero">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (          <div className="hero-content">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (            <p className="tagline">Hello, I'm</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (            <h1>Vaddeboina Akhil</h1>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (            <h2>DevOps Engineer & Full Stack Creator</h2>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (            <p className="hero-subtitle">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (              Building automated pipelines for modern cloud-native apps with) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (              Jenkins, Docker, and Kubernetes.) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (            </p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (            <div className="hero-actions">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (              <a href="#projects" className="btn primary">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (                Explore My Work) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (              </a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (              <a href="#contact" className="btn secondary">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (                Get in Touch) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (              </a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (          </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (        </section>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (        <section id="about" className="section">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (          <h3>About</h3>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (          <p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (            This portfolio is fully automated using a CI/CD pipeline. Whenever I) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (            push code to GitHub, Jenkins builds a new Docker image and deploys) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (            it to a Kubernetes cluster using Rolling Updates.) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (          </p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (        </section>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (        <section id="skills" className="section">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (          <h3>Skills</h3>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (          <div className="grid">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (            <div className="card">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (              <h4>DevOps &amp; Cloud</h4>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (              <p>Jenkins, Docker, Kubernetes, Helm, GitHub Actions</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (            <div className="card">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (              <h4>Backend</h4>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (              <p>Node.js, Express, REST APIs</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (            <div className="card">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (              <h4>Frontend</h4>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (              <p>React, HTML, CSS, JavaScript</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (            </div>) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 4583 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.jsx \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (            <div className="card">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (              <h4>Tools</h4>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (              <p>Linux, Git, Bash, Docker Hub, Minikube</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (          </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (        </section>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (        <section id="projects" className="section">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (          <h3>Projects</h3>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (          {projectsLoading ? \() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (            <p>Loading projects...</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (          \) : \() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (            <div className="grid">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (              {projects.map\(project => \() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (                <div key={project.id} className="card">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (                  <h4>{project.title}</h4>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (                  <p>{project.description}</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (                  {project.technologies && \() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (                    <p><strong>Technologies:</strong> {project.technologies.join\(', '\)}</p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (                  \)}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (                </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (              \)\)}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (          \)}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (        </section>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (        <section id="cicd" className="section ci-panel">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (          <h3>CI/CD Deployment Info</h3>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (          {loading && <p className="status">Loading build information?</p>}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (          {error && !loading && \() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (            <p className="status error">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (              Failed to load build info. Showing default values.) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (            </p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (          \)}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (          <div className="ci-grid">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (            <div className="ci-item">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (              <span className="label">App Version</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (              <span className="value">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (                {buildInfo?.appVersion ?? "v1.0.0"}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (              </span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (            <div className="ci-item">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (              <span className="label">Build Number</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (              <span className="value">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (                {buildInfo?.buildNumber ? `#${buildInfo.buildNumber}` : "#0"}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (              </span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (            <div className="ci-item">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (              <span className="label">Last Deployed</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (              <span className="value">{formattedDeployTime}</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (            <div className="ci-item">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (              <span className="label">Environment</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (              <span className="value">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (                {buildInfo?.environment ?? "Kubernetes"}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (              </span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (            </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (          </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (          <p className="note">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (            These values are injected as environment variables during the Jenkins) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 1927 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.jsx \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (            pipeline and baked into the Docker image.) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (          </p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (        </section>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (        <section id="contact" className="section">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (          <h3>Contact</h3>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (          <p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (            Email:{" "}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (            <a href="mailto:you@example.com">you@example.com</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (            <br />) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (            GitHub: <a href="https://github.com/yourusername">yourusername</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (            <br />) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (            LinkedIn:{" "}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (            <a href="https://linkedin.com/in/yourprofile">yourprofile</a>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (          </p>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (        </section>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (      </main>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (      <footer className="footer">) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (        <span>? {new Date\(\).getFullYear\(\)} Your Name</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (        <span>Built with React ? Deployed on Kubernetes</span>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (      </footer>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (    </div>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (  \);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (export default App;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm () Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 1100 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/main.jsx) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (import React from "react";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (import ReactDOM from "react-dom/client";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (import App from "./App";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (import "./index.css";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (const rootEl = document.getElementById\("root"\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (if \(!rootEl\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  console.error\("Root element #root not found"\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (} else {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  ReactDOM.createRoot\(rootEl\).render\() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (    <React.StrictMode>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (      <App />) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (    </React.StrictMode>) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (  \);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm () Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 3198 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.css) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (.app {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (  min-height: 100vh;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (  color: #e5e7eb;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (.navbar {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (  position: sticky;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  top: 0;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  z-index: 20;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (  display: flex;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  align-items: center;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (  justify-content: space-between;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (  padding: 1rem 6vw;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (  background: rgba\(15, 23, 42, 0.9\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (  backdrop-filter: blur\(16px\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (  border-bottom: 1px solid rgba\(148, 163, 184, 0.2\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (.logo {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (  font-weight: 700;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (  letter-spacing: 0.08em;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (  text-transform: uppercase;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (  font-size: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (  color: #38bdf8;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (.navbar nav {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (  display: flex;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (  gap: 1.5rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (  font-size: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (.navbar a {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (  text-decoration: none;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (  color: #cbd5f5;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (  opacity: 0.9;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (.navbar a:hover {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (  color: #38bdf8;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (main {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (  padding: 0 6vw 4rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (.hero {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (  display: flex;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (  align-items: center;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (  min-height: 70vh;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (.hero-content {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (  max-width: 640px;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (.tagline {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (  text-transform: uppercase;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (  letter-spacing: 0.16em;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (  color: #9ca3af;) Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 3257 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.css \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (  font-size: 0.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (  margin-bottom: 0.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (h1 {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (  font-size: clamp\(2.5rem, 4vw, 3.5rem\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (  margin: 0;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (h2 {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  font-size: clamp\(1.4rem, 2vw, 1.8rem\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (  margin: 0.5rem 0 0.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (  color: #9ca3af;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (  font-weight: 500;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (.hero-subtitle {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (  max-width: 34rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (  color: #9ca3af;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (  line-height: 1.6;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (.hero-actions {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (  margin-top: 1.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (  display: flex;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (  gap: 0.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (  flex-wrap: wrap;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (.btn {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (  padding: 0.7rem 1.4rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (  border-radius: 999px;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (  font-size: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (  border: 1px solid transparent;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (  cursor: pointer;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (  text-decoration: none;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (  display: inline-flex;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (  align-items: center;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (  justify-content: center;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (.btn.primary {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (  background: linear-gradient\(to right, #38bdf8, #6366f1\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (  color: #0b1120;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (.btn.secondary {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (  border-color: rgba\(148, 163, 184, 0.4\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (  color: #e5e7eb;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (.section {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (  margin-top: 4rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (.section h3 {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (  font-size: 1.3rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (  margin-bottom: 0.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm () Tj ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 3524 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.css \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (.section p {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (  max-width: 60rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (  color: #9ca3af;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (  line-height: 1.7;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (.grid {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  display: grid;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  grid-template-columns: repeat\(auto-fit, minmax\(220px, 1fr\)\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (  gap: 1.25rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  margin-top: 1.25rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (.card {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (  background: rgba\(15, 23, 42, 0.9\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (  border-radius: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (  padding: 1.2rem 1.3rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (  border: 1px solid rgba\(148, 163, 184, 0.25\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (  box-shadow: 0 18px 40px rgba\(15, 23, 42, 0.8\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (.card h4 {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (  margin: 0 0 0.5rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (  font-size: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (.card p {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (  margin: 0;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (  font-size: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (.ci-panel {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (  border-radius: 1.2rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (  padding: 1.5rem 1.5rem 1.4rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (  background: radial-gradient\(circle at top left, #0f172a, #020617\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (  border: 1px solid rgba\(56, 189, 248, 0.5\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (  box-shadow: 0 24px 60px rgba\(8, 47, 73, 0.9\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (.ci-grid {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (  display: grid;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (  grid-template-columns: repeat\(auto-fit, minmax\(210px, 1fr\)\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (  gap: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (  margin-top: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (.ci-item {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (  padding: 0.85rem 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (  border-radius: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (  background: rgba\(15, 23, 42, 0.9\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (  border: 1px solid rgba\(148, 163, 184, 0.35\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (.label {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (  display: block;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (  font-size: 0.75rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (  text-transform: uppercase;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (  letter-spacing: 0.12em;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (  color: #9ca3af;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (  margin-bottom: 0.2rem;) Tj ET
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 3054 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/App.css \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (.value {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (  font-size: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (  font-weight: 600;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (  color: #e5e7eb;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (.status {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (  font-size: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  color: #e5e7eb;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (.status.error {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (  color: #fecaca;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (.note {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (  margin-top: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (  font-size: 0.8rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (  color: #9ca3af;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (.footer {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (  padding: 1.5rem 6vw 2rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (  border-top: 1px solid rgba\(148, 163, 184, 0.3\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (  display: flex;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (  justify-content: space-between;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (  gap: 1rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (  font-size: 0.8rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (  color: #9ca3af;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (@media \(max-width: 768px\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (  .navbar {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (    padding-inline: 1.5rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (  main {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (    padding-inline: 1.5rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (  .navbar nav {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (    gap: 0.9rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (    font-size: 0.8rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (  .hero {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm (    min-height: 60vh;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (  .footer {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (    flex-direction: column;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (    align-items: flex-start;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (    padding-inline: 1.5rem;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (  }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm () Tj ET
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 31 0 R >>
+endobj
+33 0 obj
+<< /Length 1068 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/src/index.css) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (*,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (*::before,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (*::after {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (  box-sizing: border-box;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (body {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  margin: 0;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (    sans-serif;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  background: radial-gradient\(circle at top left, #101827, #020617 55%\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (  color: #e5e7eb;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (a {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (  color: inherit;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm () Tj ET
+endstream
+endobj
+34 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 33 0 R >>
+endobj
+35 0 obj
+<< /Length 973 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/package.json) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm ({) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm ("name": "portfolio-frontend",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm ("version": "1.0.0",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm ("private": true,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm ("scripts": {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm ("dev": "vite",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm ("build": "vite build",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm ("preview": "vite preview") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (},) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm ("dependencies": {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm ("react": "^18.3.0",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm ("react-dom": "^18.3.0",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm ("vite": "^6.4.1",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm ("@vitejs/plugin-react": "^4.7.0") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm () Tj ET
+endstream
+endobj
+36 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 35 0 R >>
+endobj
+37 0 obj
+<< /Length 659 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (frontend/vite.config.mts) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (import { defineConfig } from "vite";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (import react from "@vitejs/plugin-react";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (export default defineConfig\({) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (  plugins: [react\(\)],) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (  build: {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (    outDir: "dist",) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  },) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (}\);) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm () Tj ET
+endstream
+endobj
+38 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 37 0 R >>
+endobj
+39 0 obj
+<< /Length 2536 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (Dockerfile) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (FROM node:20-alpine AS builder) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (WORKDIR /app/frontend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (# Build-time arguments coming from Jenkins) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (ARG APP_VERSION="v1.0.0") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (ARG BUILD_NUMBER="0") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (ARG DEPLOY_TIME="unknown") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (ARG ENVIRONMENT="Kubernetes") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (# Step 1: Copy only package files first \(better layer caching\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (COPY frontend/package.json frontend/package-lock.json* ./) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (# Step 2: Install ALL dependencies \(vite lives in devDependencies\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (RUN npm install) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (# Step 3: Copy source AFTER install \(node_modules will NOT be overwritten\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (COPY frontend/ ./) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (# Step 4: Create build-info.json that the React app will fetch at runtime) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (RUN mkdir -p public && \\) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (    printf '{\\n  "appVersion": "%s",\\n  "buildNumber": "%s",\\n  "deployTime": "%s",\\n ) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (    "environment": "%s"\\n}\\n' \\) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (    "$APP_VERSION" "$BUILD_NUMBER" "$DEPLOY_TIME" "$ENVIRONMENT" > public/build-info.json) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (# Step 5: Build production bundle) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (RUN npm run build) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (# --- Runtime image ---) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (FROM nginx:stable-alpine) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (COPY --from=builder /app/frontend/dist /usr/share/nginx/html) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (COPY nginx.conf /etc/nginx/conf.d/default.conf) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (EXPOSE 80) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (CMD ["nginx", "-g", "daemon off;"]) Tj ET
+endstream
+endobj
+40 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 39 0 R >>
+endobj
+41 0 obj
+<< /Length 1502 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (nginx.conf) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (server {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (    listen 80;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (    server_name _;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (    root /usr/share/nginx/html;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (    index index.html;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (    # Gzip compression) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (    gzip on;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (    gzip_types text/plain text/css application/json application/javascript text/xml) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (    application/xml application/xml+rss text/javascript;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (    # React Router ? send all routes to index.html) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (    location / {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (        try_files $uri $uri/ /index.html;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (    }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (    # Cache static assets) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (    location ~* \\.\(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot\)$ {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (        expires 1y;) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (        add_header Cache-Control "public, immutable";) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (    }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (}) Tj ET
+endstream
+endobj
+42 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 41 0 R >>
+endobj
+43 0 obj
+<< /Length 4051 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (Jenkinsfile) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (pipeline {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (    agent any) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (    environment {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-creds') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (        KUBECONFIG_CREDENTIALS_ID = 'kubeconfig-creds') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (        DOCKERHUB_REPO = '23p61a05m5/portfolio') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (        DOCKERHUB_REPO_BACKEND = '23p61a05m5/portfolio-backend') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (    }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (    stages {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (        stage\('Checkout'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (            steps {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (                checkout scm) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (            }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (        stage\('Install & Build Frontend'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (            steps {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (                dir\('frontend'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (                    bat 'npm install') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (                    bat 'npm run build') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (                }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (            }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (        stage\('Build Backend Docker Image'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (            steps {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (                dir\('backend'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (                    bat "docker build -t %DOCKERHUB_REPO_BACKEND%:%BUILD_NUMBER% .") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (                }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (            }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (        stage\('Build Frontend Docker Image'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (            steps {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (                script {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (                    env.APP_VERSION = "v1.0.${env.BUILD_NUMBER}") Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (                }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (                bat """) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (                docker build ^) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (                --build-arg APP_VERSION=%APP_VERSION% ^) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (                --build-arg BUILD_NUMBER=%BUILD_NUMBER% ^) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (                --build-arg ENVIRONMENT=Kubernetes ^) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (                -t %DOCKERHUB_REPO%:%BUILD_NUMBER% .) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm (                """) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm (            }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 185 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 174 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 163 Tm (        stage\('Push Docker Images'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 152 Tm (    steps {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 141 Tm (        withCredentials\([) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 130 Tm (            usernamePassword\() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 119 Tm (                credentialsId: env.DOCKERHUB_CREDENTIALS_ID,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 108 Tm (                usernameVariable: 'DOCKERHUB_USER',) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 97 Tm (                passwordVariable: 'DOCKERHUB_PASS') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 86 Tm (            \)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 75 Tm (        ]\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 64 Tm (            bat """) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 53 Tm (            docker login -u %DOCKERHUB_USER% -p %DOCKERHUB_PASS%) Tj ET
+endstream
+endobj
+44 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 43 0 R >>
+endobj
+45 0 obj
+<< /Length 2227 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (Jenkinsfile \(cont.\)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (            docker push %DOCKERHUB_REPO%:%BUILD_NUMBER%) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (            docker push %DOCKERHUB_REPO_BACKEND%:%BUILD_NUMBER%) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (            """) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (    }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (        stage\('Deploy to Kubernetes'\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (            steps {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (                withCredentials\([) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (                    file\() Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (                        credentialsId: env.KUBECONFIG_CREDENTIALS_ID,) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (                        variable: 'KUBECONFIG_FILE') Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (                    \)) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (                ]\) {) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (                    bat """) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (                    set KUBECONFIG=%KUBECONFIG_FILE%) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (                    kubectl set image deployment/portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (            portfolio=%DOCKERHUB_REPO%:%BUILD_NUMBER%) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (                    kubectl set image deployment/portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (            portfolio-backend=%DOCKERHUB_REPO_BACKEND%:%BUILD_NUMBER%) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (                    kubectl rollout status deployment/portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (                    kubectl rollout status deployment/portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (                    """) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (                }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (            }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (        }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (    }) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (}) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm () Tj ET
+endstream
+endobj
+46 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 45 0 R >>
+endobj
+47 0 obj
+<< /Length 2718 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (k8s/deployment.yaml) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (apiVersion: apps/v1) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (kind: Deployment) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (metadata:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (  name: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (  labels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (    app: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (spec:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  replicas: 2) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  selector:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (    matchLabels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (      app: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (  template:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (    metadata:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (      labels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (        app: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (    spec:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (      containers:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (        - name: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (          image: 23p61a05m5/portfolio:latest) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (          imagePullPolicy: Always) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (          ports:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (            - containerPort: 80) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (---) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (apiVersion: apps/v1) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (kind: Deployment) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (metadata:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (  name: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (  labels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (    app: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (spec:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (  replicas: 2) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm (  selector:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm (    matchLabels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 339 Tm (      app: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 328 Tm (  template:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 317 Tm (    metadata:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 306 Tm (      labels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 295 Tm (        app: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 284 Tm (    spec:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 273 Tm (      containers:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 262 Tm (        - name: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 251 Tm (          image: 23p61a05m5/portfolio-backend:latest) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 240 Tm (          imagePullPolicy: Always) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 229 Tm (          ports:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 218 Tm (            - containerPort: 3000) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 207 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 196 Tm () Tj ET
+endstream
+endobj
+48 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 47 0 R >>
+endobj
+49 0 obj
+<< /Length 1791 >>
+stream
+BT /F1 16 Tf 1 0 0 1 50 726 Tm (k8s/service.yaml) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 702 Tm (apiVersion: v1) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 691 Tm (kind: Service) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 680 Tm (metadata:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 669 Tm (  name: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 658 Tm (  labels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 647 Tm (    app: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 636 Tm (spec:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 625 Tm (  type: NodePort) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 614 Tm (  selector:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 603 Tm (    app: portfolio) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 592 Tm (  ports:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 581 Tm (    - name: http) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 570 Tm (      port: 80) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 559 Tm (      targetPort: 80) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 548 Tm (      nodePort: 30080) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 537 Tm (---) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 526 Tm (apiVersion: v1) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 515 Tm (kind: Service) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 504 Tm (metadata:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 493 Tm (  name: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 482 Tm (  labels:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 471 Tm (    app: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 460 Tm (spec:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 449 Tm (  type: NodePort) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 438 Tm (  selector:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 427 Tm (    app: portfolio-backend) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 416 Tm (  ports:) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 405 Tm (    - name: http) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 394 Tm (      port: 3000) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 383 Tm (      targetPort: 3000) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 372 Tm (      nodePort: 30081) Tj ET
+BT /F2 9 Tf 1 0 0 1 50 361 Tm () Tj ET
+BT /F2 9 Tf 1 0 0 1 50 350 Tm () Tj ET
+endstream
+endobj
+50 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 49 0 R >>
+endobj
+xref
+0 51
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000269 00000 n 
+0000000344 00000 n 
+0000000412 00000 n 
+0000004279 00000 n 
+0000004415 00000 n 
+0000005647 00000 n 
+0000005783 00000 n 
+0000006806 00000 n 
+0000006943 00000 n 
+0000008097 00000 n 
+0000008235 00000 n 
+0000012649 00000 n 
+0000012787 00000 n 
+0000017122 00000 n 
+0000017260 00000 n 
+0000021675 00000 n 
+0000021813 00000 n 
+0000026449 00000 n 
+0000026587 00000 n 
+0000028567 00000 n 
+0000028705 00000 n 
+0000029858 00000 n 
+0000029996 00000 n 
+0000033247 00000 n 
+0000033385 00000 n 
+0000036695 00000 n 
+0000036833 00000 n 
+0000040410 00000 n 
+0000040548 00000 n 
+0000043655 00000 n 
+0000043793 00000 n 
+0000044914 00000 n 
+0000045052 00000 n 
+0000046077 00000 n 
+0000046215 00000 n 
+0000046926 00000 n 
+0000047064 00000 n 
+0000049653 00000 n 
+0000049791 00000 n 
+0000051346 00000 n 
+0000051484 00000 n 
+0000055588 00000 n 
+0000055726 00000 n 
+0000058006 00000 n 
+0000058144 00000 n 
+0000060915 00000 n 
+0000061053 00000 n 
+0000062897 00000 n 
+trailer
+<< /Size 51 /Root 1 0 R >>
+startxref
+63035
+%%EOF
