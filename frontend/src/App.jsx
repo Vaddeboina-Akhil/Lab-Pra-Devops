@@ -133,7 +133,7 @@ function App() {
         <section id="hero" className="hero">
           <div className="hero-content">
             <p className="tagline">Hello, I'm</p>
-            <h1>Vaddeboina Akhillll</h1>
+            <h1>Vaddeboina akhil</h1>
             <h2>DevOps Engineer & Full Stack Creator</h2>
             <p className="hero-subtitle">
               Building automated pipelines for modern cloud-native apps with
