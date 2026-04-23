@@ -133,7 +133,7 @@ function App() {
         <section id="hero" className="hero">
           <div className="hero-content">
             <p className="tagline">Hello, I'm</p>
-            <h1>Vaddeboina AKHILLL            docker stop jenkins
+            <h1>Vaddeboina AKHIL            docker stop jenkins
             docker rm jenkins
             docker run -d -p 8081:8080 --name jenkins -v jenkins_data:/var/jenkins_home jenkins/jenkins:lts</h1>
             <h2>DevOps Engineer & Full Stack Creator</h2>
@@ -201,7 +201,7 @@ function App() {
             </div>
           )}
         </section>
-
+*
         <section id="cicd" className="section ci-panel">
           <h3>CI/CD Deployment Info</h3>
           {loading && <p className="status">Loading build information…</p>}
