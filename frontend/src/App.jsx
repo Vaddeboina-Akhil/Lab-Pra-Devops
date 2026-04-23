@@ -133,7 +133,9 @@ function App() {
         <section id="hero" className="hero">
           <div className="hero-content">
             <p className="tagline">Hello, I'm</p>
-            <h1>Vaddeboina AKHILLLL</h1>
+            <h1>Vaddeboina AKHILLL            docker stop jenkins
+            docker rm jenkins
+            docker run -d -p 8081:8080 --name jenkins -v jenkins_data:/var/jenkins_home jenkins/jenkins:lts</h1>
             <h2>DevOps Engineer & Full Stack Creator</h2>
             <p className="hero-subtitle">
               Building automated pipelines for modern cloud-native apps with
